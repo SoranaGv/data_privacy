@@ -1,0 +1,9 @@
+# Python 3.12 (TenSEAL 0.3.18 needs Python >= 3.11)
+# Linux/WSL: install CPU-only torch before this file (pip install torch --index-url https://download.pytorch.org/whl/cpu)
+
+torch>=2.5
+transformers>=4.46
+datasets>=3.0
+numpy>=1.26
+tenseal==0.3.18
+cryptography>=42    # AES-GCM for the document texts in 3.3
