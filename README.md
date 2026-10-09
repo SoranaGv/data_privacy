@@ -26,10 +26,7 @@ The first run downloads the SQuAD dataset and the Snowflake model (about 440 MB)
 
 | Part | Folder | Code? |
 |---|---|---|
-| Q1 Secret sharing | – | No, only in the report |
-| Q2 Garbled circuits | – | No, only in the report |
 | 3.1 Plaintext retriever | `q3_1_plaintext/` | Yes |
-| 3.2 What the server learns | – | No, only in the report |
 | 3.3 Encrypted retrieval | `TO DO add the name you pick here` | Yes |
 | 3.4 Cost estimation | `TO DO add the name you pick here` | Yes (timings for 3.3(e)) |
 
