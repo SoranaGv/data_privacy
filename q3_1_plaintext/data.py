@@ -1,6 +1,4 @@
 """
-Run from the repo root:
-    python src/data.py
 
 Creates:
     data/docs.json     1,000 documents  
