@@ -14,6 +14,7 @@ K_VALUES = [1, 5, 10]
 WARMUP = 5  # first few queries are slower (caches, model start-up), so we don't time them
 
 ROOT = Path(__file__).resolve().parent.parent
+RESULTS_DIR = ROOT / "results" / "q3_1"
 
 
 def cpu_name():
@@ -73,14 +74,13 @@ def main():
         print(f"  {stage:<10} {ms:8.3f}")
 
     # Save for the report 
-    (ROOT / "results").mkdir(exist_ok=True)
-    with open(ROOT / "results" / "plain_eval.json", "w") as f:
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    with open(RESULTS_DIR / "plain_eval.json", "w") as f:
         json.dump({"n_queries": n, "warmup": WARMUP, "cpu": cpu_name(),
                    "recall": recall, "avg_latency_ms": avg_ms}, f, indent=1)
-    with open(ROOT / "results" / "plain_top10.json", "w") as f:
+    with open(RESULTS_DIR / "plain_top10.json", "w") as f:
         json.dump(top10_per_query, f, indent=1)
-    print("Saved to results/plain_eval.json and results/plain_top10.json")
-
+    print("Saved to results/q3_1/plain_eval.json and results/q3_1/plain_top10.json")
 
 if __name__ == "__main__":
     main()

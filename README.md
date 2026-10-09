@@ -62,8 +62,8 @@ The first two steps are optional, because `data/` and `embeddings/` are already 
 | `encode.py` | 3.1(a) | `encode(texts)`: the [CLS] vector of the model, cut to 256 numbers and normalized. Questions get the query prefix, documents do not | `embeddings/doc_768.npy`, `embeddings/query_768.npy` |
 | `similarity.py` | 3.1(c) | Our own `cosine_similarity` and `top_k`, using only NumPy | – |
 | `server.py` | 3.1(b) | The `Server` class stores the documents and vectors. The `Client` only talks to it through `search(query_vector, k)` | – |
-| `eval_dims.py` | 3.1(a) | Recall@10 for each vector size | `results/recall_by_dim.json` |
-| `eval_plain.py` | 3.1(d) | Asks all 200 questions one by one and times each step | `results/plain_eval.json`, `results/plain_top10.json` |
+| `eval_dims.py` | 3.1(a) | Recall@10 for each vector size | `results/q3_1/recall_by_dim.json` |
+| `eval_plain.py` | 3.1(d) | Asks all 200 questions one by one and times each step | `results/q3_1/plain_eval.json`, `results/q3_1/plain_top10.json` |
 
 We do not use faiss, sklearn or `torch.topk`. The only place we use `np.argsort` is the test at the bottom of `similarity.py`, to check that our own `top_k` gives the right answer.
 

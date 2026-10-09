@@ -15,6 +15,7 @@ DIMS = [64, 128, 256, 768]
 K = 10
 
 ROOT = Path(__file__).resolve().parent.parent
+RESULTS_DIR = ROOT / "results" / "q3_1"
 
 
 def recall_at_k(doc_vectors, query_vectors, correct_docs, k):
@@ -45,10 +46,10 @@ def main():
         print(f"{dim:>10}  {recall:.3f}")
 
     # Save the numbers for the report
-    (ROOT / "results").mkdir(exist_ok=True)
-    with open(ROOT / "results" / "recall_by_dim.json", "w") as f:
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    with open(RESULTS_DIR / "recall_by_dim.json", "w") as f:
         json.dump(results, f, indent=1)
-    print("Saved to results/recall_by_dim.json")
+    print("Saved to results/q3_1/recall_by_dim.json")
 
 
 if __name__ == "__main__":
