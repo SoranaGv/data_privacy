@@ -1,8 +1,9 @@
 # Data Privacy Assignment 2, Group 6
 
-This repository has the code for **Q3: Privacy-Preserving Retrieval for RAG**. The answers and explanations are in our PDF report. This README explains how to run the code and get every number in the report.
+This README contains the code for the whole assignment. It explains how to set up the code and how to get every number in our PDF report. The answers and explanations are in the report.
 
 Members: Sorana Gavril, Bianca Vraci, Maria Voicu
+
 
 ## Setup
 
@@ -21,11 +22,21 @@ pip install -r requirements.txt
 
 The first run downloads the SQuAD dataset and the Snowflake model (about 440 MB) from Hugging Face. 
 
-## Folders
+## What is in this repository
+
+| Part | Folder | Code? |
+|---|---|---|
+| Q1 Secret sharing | – | No, only in the report |
+| Q2 Garbled circuits | – | No, only in the report |
+| 3.1 Plaintext retriever | `q3_1_plaintext/` | Yes |
+| 3.2 What the server learns | – | No, only in the report |
+| 3.3 Encrypted retrieval | `TO DO add the name you pick here` | Yes |
+| 3.4 Cost estimation | `TO DO add the name you pick here` | Yes (timings for 3.3(e)) |
+
+Shared folders, used by all parts:
 
 | Folder | What is in it |
 |---|---|
-| `src/` | All our code |
 | `data/` | The 1,000 documents and 200 questions we use |
 | `embeddings/` | The vectors of the documents and questions (768 numbers each) |
 | `results/` | The numbers we report |
@@ -34,15 +45,17 @@ The first run downloads the SQuAD dataset and the Snowflake model (about 440 MB)
 
 Run these commands from the main folder of the repository, in this order:
 
+
 ```bash
-python src/data.py        # pick the 1,000 documents and 200 questions
-python src/encode.py      # turn them into vectors with the Snowflake model 
-python src/similarity.py  # test our own cosine similarity and top-k
-python src/eval_dims.py   # 3.1(a): Recall@10 at 64, 128, 256 and 768 dimensions
-python src/eval_plain.py  # 3.1(d): Recall@1/5/10 and latency
+python q3_1_plaintext/data.py        # pick the 1,000 documents and 200 questions
+python q3_1_plaintext/encode.py      # turn them into vectors with the Snowflake model 
+python q3_1_plaintext/similarity.py  # test our own cosine similarity and top-k
+python q3_1_plaintext/eval_dims.py   # 3.1(a): Recall@10 at 64, 128, 256 and 768 dimensions
+python q3_1_plaintext/eval_plain.py  # 3.1(d): Recall@1/5/10 and latency
 ```
 
-The first two steps are optional, because `data/` and `embeddings/` are already in the repository. If you run them again, you get the same documents and questions (we use a fixed seed). 
+The first two steps are optional, because `data/` and `embeddings/` are already in the repository. If you run them again, you get the same documents and questions (we use a fixed seed). The vectors can differ in the last decimals on another computer, but this should not change the results.
+
 
 ### What each file does
 

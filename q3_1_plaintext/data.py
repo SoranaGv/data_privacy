@@ -1,5 +1,4 @@
 """
-
 Creates:
     data/docs.json     1,000 documents  
     data/queries.json  200 questions   
