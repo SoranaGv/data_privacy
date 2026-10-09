@@ -24,11 +24,11 @@ The first run downloads the SQuAD dataset and the Snowflake model (about 440 MB)
 
 ## What is in this repository
 
-| Part | Folder | Code? |
-|---|---|---|
-| 3.1 Plaintext retriever | `q3_1_plaintext/` | Yes |
-| 3.3 Encrypted retrieval | `TO DO add the name you pick here` | Yes |
-| 3.4 Cost estimation | `TO DO add the name you pick here` | Yes (timings for 3.3(e)) |
+| Part | Folder | 
+|---|---|
+| 3.1 Plaintext retriever | `q3_1_plaintext/` | 
+| 3.3 Encrypted retrieval | `TO DO add the name you pick here` | 
+| 3.4 Cost estimation | `TO DO add the name you pick here` | 
 
 Shared folders, used by all parts:
 
