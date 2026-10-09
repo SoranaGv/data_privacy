@@ -1,0 +1,17 @@
+{
+ "n_queries": 200,
+ "warmup": 5,
+ "cpu": "AMD Ryzen 7 8745HX with Radeon Graphics",
+ "recall": {
+  "Recall@1": 0.755,
+  "Recall@5": 0.935,
+  "Recall@10": 0.96
+ },
+ "avg_latency_ms": {
+  "encode": 30.338471269985803,
+  "similarity": 0.23730277000368005,
+  "top_k": 0.11805946498725461,
+  "fetch": 0.01058132500247666,
+  "total": 30.704414829979214
+ }
+}
