@@ -1,0 +1,11 @@
+== Simple design: 1 ciphertext per document (what we implemented) ==
+similarity       110.8 min
+decrypt_scores   12.4 min
+server storage   331.4 GB (vectors) + 764.1 MB (texts) + 35.3 MB (keys)
+returned scores  235.1 GB per query (one ciphertext per document!)
+
+== Packed design: floor(4096/64)=64 documents per ciphertext (estimate from op timings) ==
+ciphertexts      15,625
+similarity       2.4 min  (9.20 ms per ciphertext: 1 mult + 6 rot + 6 add)
+vector storage   5.2 GB
+returned scores  5.2 GB per query (still large)

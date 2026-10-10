@@ -1,0 +1,22 @@
+{
+ "runs": 100,
+ "ckks_ms": {
+  "ct_ct_multiplication": 1.6340808401582763,
+  "ct_pt_multiplication": 0.8518220903351903,
+  "addition": 0.033372920006513596,
+  "rotation": 1.226995489083823,
+  "rotation_crosscheck_from_sum2": 1.2392562499735504
+ },
+ "numpy_ms_4096": {
+  "ct_ct_multiplication": 0.0008591695223003626,
+  "ct_pt_multiplication": 0.0008104101289063692,
+  "addition": 0.0008175004040822387,
+  "rotation": 0.003982080379500985
+ },
+ "numpy_ms_64": {
+  "ct_ct_multiplication": 0.0002400000812485814,
+  "ct_pt_multiplication": 0.0002400000812485814,
+  "addition": 0.0003100000321865082,
+  "rotation": 0.003167910035699606
+ }
+}

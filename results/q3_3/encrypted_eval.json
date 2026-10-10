@@ -1,0 +1,61 @@
+{
+ "cpu": "arm",
+ "n_queries": 200,
+ "live_encode": false,
+ "recall_encrypted": {
+  "Recall@1": 0.485,
+  "Recall@5": 0.77,
+  "Recall@10": 0.82
+ },
+ "recall_plain_64d": {
+  "Recall@1": 0.485,
+  "Recall@5": 0.77,
+  "Recall@10": 0.82
+ },
+ "max_abs_score_diff": 1.1963874979592504e-06,
+ "top10_exact_match_vs_plain64": 1.0,
+ "top10_same_set_vs_plain64": 1.0,
+ "top10_mean_overlap_vs_q31_256d": 0.42550000000000004,
+ "latency_ms": {
+  "q3_1_plain_256d": {
+   "encode": 30.338471269985803,
+   "encrypt_query": 0.0,
+   "similarity": 0.23730277000368005,
+   "decrypt_scores": 0.0,
+   "top_k": 0.11805946498725461,
+   "fetch": 0.01058132500247666,
+   "total": 30.704414829979214
+  },
+  "plain_64d": {
+   "encode": 30.338471269985888,
+   "encrypt_query": 0.0,
+   "similarity": 0.204759567277506,
+   "decrypt_scores": 0.0,
+   "top_k": 0.06521957635413855,
+   "fetch": 0.012460376019589603,
+   "total": 30.620910789637122
+  },
+  "q3_3_encrypted": {
+   "encode": 30.338471269985888,
+   "encrypt_query": 3.8226169100380503,
+   "similarity": 6647.661014384357,
+   "decrypt_scores": 742.3857118748128,
+   "top_k": 0.0841531393234618,
+   "fetch": 0.14103811932727695,
+   "total": 7424.433005697845
+  }
+ },
+ "setup": {
+  "keygen_s": 0.11750208301236853,
+  "encrypt_1000_docs_s": 3.12163754098583
+ },
+ "storage_bytes": {
+  "enc_vectors": 331381705,
+  "enc_texts": 764062,
+  "public_context_with_galois_keys": 35286015,
+  "plaintext_vectors_64d_float32+texts": 992062,
+  "one_vector_ciphertext": 331381,
+  "enc_query": 331328,
+  "all_score_ciphertexts_per_query": 235070458
+ }
+}
